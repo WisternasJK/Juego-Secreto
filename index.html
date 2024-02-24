@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>JS Game</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container__contenido">
+            <div class="container__informaciones">
+                <div class="container__texto">
+                    <h1></h1>   <!--Vendría a ser el título-->
+                    <p class="texto__parrafo"></p>   <!--La "p" es de parrafo-->
+                </div>
+                <!--type: Tipo de entrada - id: indentifica al elemento al vincularlo con JS o CSS - min: valor minimo aceptable - max: valor máximo aceptable - class: lista de las clases del elemento (input). Permiten a CSS y JS seleccionar y acceder a elementos específicos-->
+                <input type="number" id="valorUsuario" min="1" max="10" class="container__input">   <!--Es una etiqueta que representa el cuadro de texto-->
+                <div class="chute container__botones">
+                    <!--Se puede poner eventos, en este caso, onclick. Se puede poner codigo JS-->
+                    <!--Acá se invoca a la funcion intentoDeUsuario() desde JS a HTML /*--1--*/-->
+                    <!--Todos los eventos de JS empiezan con ON-->
+                    <button onclick="verificarIntento();" class="container__boton">Intentar</button>   <!--Representa un boton-->
+                                                                  <!--El disable hace que el elemento esté desactivado-->
+                    <button onclick="reiniciarJuego();" class="container__boton" id="reiniciar" disabled>Nuevo juego</button>   <!--Representa un boton-->
+                </div>
+            </div>
+            <img src="./img/ia.png" alt="Una persona mirando a la izquierda" class="container__imagen-persona" />
+        </div>
+    </div>
+
+
+
+    <script src="app.js" defer></script>   <!--La inclusión del archivo JavaScript se hace con el atributo src -->
+
+</body>
+
+</html>
